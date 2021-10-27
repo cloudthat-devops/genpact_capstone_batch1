@@ -1,6 +1,8 @@
 # Genpact Capstone Project
 
-## Guideline for Python ,API with Python, RDBMS ( Capestone_project ):
+## Python Task
+
+### Guideline for Python ,API with Python, RDBMS ( Capestone_project ):
 
 ### Code is provided for the tasks but somewhere code is missing, and format is not appropriate. So, do it yourself and complete the provided tasks.
 
@@ -16,6 +18,11 @@
 
 <a href="https://github.com/cloudthat-devops/genpact_capstone_batch1/blob/main/Python/api.py">See the Python solution code here</a>
 
+## AWS HAPROXY TASK
+
+### Create two EC2 instances and install apache2 web-server in it. Launch the third EC2 instance and install HA-PROXY in it. The HA-PROXY instance should act as a load balancer for the two Apache web-server instances
+
+<a href="https://github.com/cloudthat-devops/genpact_capstone_batch1/blob/main/AWS_HAPROXY/AWS%20Hands%20on%20Lab-Hproxy.pdf">See the solution here</a>
 
 ## Terraform & Ansible Task :
 ### Using Terraform launch an EC2 instance with security group corresponding to web-application. Using the terraform created instance and ansible install web-server (httpd) in that instance. Make sure the webs-server is up and running.
