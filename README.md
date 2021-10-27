@@ -1,7 +1,7 @@
 # Genpact Capstone Project
 
-## Task 1:
-Using Terraform launch an EC2 instance with security group corresponding to web-application. Using the terraform created instance and ansible install web-server (httpd) in that instance. Make sure the webs-server is up and running.
+## Task :
+### Using Terraform launch an EC2 instance with security group corresponding to web-application. Using the terraform created instance and ansible install web-server (httpd) in that instance. Make sure the webs-server is up and running.
 
 Install terraform using following commands
 
@@ -49,11 +49,11 @@ use ansible-playbook <playbook name.yaml>
   
 Make sure the webserver is running
   
-Task 2:
-Build a docker image to use the python api and push it to the DockerHub. Create a pod and nodeport service with that Docker image.
+## Task :
+### Build a docker image to use the python api and push it to the DockerHub. Create a pod and nodeport service with that Docker image.
   
-  Hint: A KOPS cluster would be provided to you. You can use the worker nodes to write DockerFile and build image
-  Hint: Use the DockerFile provided to you if needed to create the docker image
+###  Hint: A KOPS cluster would be provided to you. You can use the worker nodes to write DockerFile and build image
+###  Hint: Use the DockerFile provided to you if needed to create the docker image
  
 Create the DockerFile, requirements.txt and python api code in the same directory. use the following commands to build the image and push it to docker hub
   
