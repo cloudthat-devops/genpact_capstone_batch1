@@ -1,4 +1,6 @@
-First Server Commands
+## First Server Commands
+
+```
 sudo su
 hostnamectl set-hostname BS1
 yum install httpd -y
@@ -18,17 +20,11 @@ vi /etc/hosts
   3.91.95.202  HA
   press esc key press:wq
   press enter key
+```
 
+## Second Server Commands
 
-
-
-
-
-
-
-
-Second Server Commands
-
+```
 sudo su
 hostnamectl set-hostname BS2
 yum install httpd -y
@@ -48,17 +44,11 @@ press insert key
 3.91.95.202 HA
 press esc key press:wq
 press enter key
+```
 
+## HAProxy Server Commands
 
-
-
-
-
-
-
-
-
-HAProxy Server Commands
+```
 sudo su
 hostnamectl set-hostname HA
 yum install haproxy -y
@@ -81,4 +71,4 @@ press esc key press:wq
 press enter key
 
 systemctl restart haproxy
-
+```
