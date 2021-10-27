@@ -10,7 +10,11 @@
 
 ### TASK 3: Create a Restful API in python with Flask for the CRUD operations specifically get, put, delete with Postman only, record the screenshots for three of operations.
 
+<a href="https://github.com/cloudthat-devops/genpact_capstone_batch1/blob/main/Python/Python_readme.pdf">See the Python task here</a>
+
 <a href="https://github.com/cloudthat-devops/genpact_capstone_batch1/blob/main/Readme_python.md">See the Python task copyable link here</a>
+
+<a href="https://github.com/cloudthat-devops/genpact_capstone_batch1/blob/main/Python/api.py">See the Python solution code here</a>
 
 
 ## Task :
