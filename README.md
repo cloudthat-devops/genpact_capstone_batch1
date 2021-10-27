@@ -21,6 +21,7 @@ $ sudo pip3 install awscli
 use aws configure and give your credentials
 
 create a directory and inside that directory create your terraform files to create a instance
+<a href="https://github.com/cloudthat-devops/genpact_capstone_batch1/tree/main/terraform">See the Terraform files here here</a>
 
 Also remember to create key pair using 
 
