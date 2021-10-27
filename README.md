@@ -1,4 +1,6 @@
 # Genpact Capstone Project
+## Task :
+### 
 
 ## Task :
 ### Using Terraform launch an EC2 instance with security group corresponding to web-application. Using the terraform created instance and ansible install web-server (httpd) in that instance. Make sure the webs-server is up and running.
