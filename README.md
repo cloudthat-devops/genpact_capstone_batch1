@@ -7,16 +7,20 @@
 
 Install terraform using following commands
 
+```
 $ sudo apt update
 $ sudo apt install wget unzip -y
 $ wget https://releases.hashicorp.com/terraform/1.0.9/terraform_1.0.9_linux_amd64.zip
 $ unzip terraform_1.0.9_linux_amd64.zip
 $ sudo mv terraform /usr/local/bin
+```
 
 install the aws cli
 
+```
 $ sudo apt-get install python3-pip -y
 $ sudo pip3 install awscli 
+```
 
 use aws configure and give your credentials
 
@@ -26,34 +30,50 @@ create a directory and inside that directory create your terraform files to crea
 
 Also remember to create key pair using 
 
+```
 $ ssh-keygen -f mykey
+```
 
 ### ** Make sure to modify your ami depending upon region and instance you need. Also modify the VPC id **
 
-Finally use terraform init, fmt, validate, plan & apply to create your instance
+Finally use the following commands to to create your instance
+
+```
+terraform init
+terraform fmt
+terraform validate
+terraform plan 
+terraform apply 
+```
 
 
 Once you have created instance using terraform ssh into that instance and install ansible in it
 
 Install the ansible using the following commands
 
+```
 $ sudo yum check-update
 $ sudo yum install python3.8 wget -y
 $ sudo pip3 install awscli boto boto3 ansible
 $ ansible --version
+```
 
 use aws configure and give your credentials
 
 Create a inventory in the location /etc/ansible/hosts
 
-** localhost ansible_connection=local **
-
+```
+localhost ansible_connection=local 
+```
 create a directory and inside that directory create your ansible playbook to install httpd webserver
 
 <a href="https://github.com/cloudthat-devops/genpact_capstone_batch1/tree/main/ansible">See the Ansible files here</a>
 
-use ansible-playbook <playbook name.yaml> 
-  
+use
+
+```
+ansible-playbook <playbook name.yaml> 
+```  
 Make sure the webserver is running
   
 ## Task :
@@ -66,20 +86,23 @@ Create the DockerFile, requirements.txt and python api code in the same director
   
 <a href="https://github.com/cloudthat-devops/genpact_capstone_batch1/tree/main/Docker">See the Docker files here</a>
   
+ ``` 
   $ docker login -u <username> 
   $ docker build -t <username>/test-flask-app:v1 . 
   $ docker push <username>/test-flask-app:v1 
+```
 
 In the jumper node create a pod that uses the above created image. Use the pod.yaml file.
   
 <a href="https://github.com/cloudthat-devops/genpact_capstone_batch1/tree/main/kubernetes">See the Kubernetes pod file here</a>
   
 Use the following command to create the pod and a service for that pod
-  
+
+```
 $ kubectl apply -f <pod file name.yaml>
 $ kubectl expose po <pod name> --type NodePort --port 5000
 $ kubectl get svc
-
+```
 Use the public Ip of the worker nodes and nodeport number to access in web page
                       
  
