@@ -24,6 +24,8 @@
 
 <a href="https://github.com/cloudthat-devops/genpact_capstone_batch1/blob/main/AWS_HAPROXY/AWS%20Hands%20on%20Lab-Hproxy.pdf">See the solution here</a>
 
+<a href="https://github.com/cloudthat-devops/genpact_capstone_batch1/blob/main/AWS_HAPROXY/haproxy_lab_notes.md">See the alternate solution here</a>
+
 ## Terraform & Ansible Task :
 ### Using Terraform launch an EC2 instance with security group corresponding to web-application. Using the terraform created instance and ansible install web-server (httpd) in that instance. Make sure the webs-server is up and running.
 
@@ -125,7 +127,18 @@ $ kubectl apply -f <pod file name.yaml>
 $ kubectl expose po <pod name> --type NodePort --port 5000
 $ kubectl get svc
 ```
-Use the public Ip of the worker nodes and nodeport number to access in web page
+Use the public IP of the worker nodes and nodeport number to access in web page
+
+#### Example
+
+```
+http://PublicIP:NodePort_no/v1/books/
+http://PublicIP:NodePort_no/v1/books/navathe
+http://PublicIP:NodePort_no/v1/books/hightower
+http://PublicIP:NodePort_no/v1/books/ritchie
+```
+
+
                       
  
   
