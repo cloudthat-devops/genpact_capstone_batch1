@@ -28,9 +28,10 @@ Also remember to create key pair using
 
 $ ssh-keygen -f mykey
 
+### ** Make sure to modify your ami depending upon region and instance you need. Also modify the VPC id **
+
 Finally use terraform init, fmt, validate, plan & apply to create your instance
 
-** Make sure to modify your ami depending upon region and instance you need. Also modify the VPC id **
 
 Once you have created instance using terraform ssh into that instance and install ansible in it
 
@@ -49,6 +50,8 @@ Create a inventory in the location /etc/ansible/hosts
 
 create a directory and inside that directory create your ansible playbook to install httpd webserver
 
+<a href="https://github.com/cloudthat-devops/genpact_capstone_batch1/tree/main/ansible">See the Ansible files here</a>
+
 use ansible-playbook <playbook name.yaml> 
   
 Make sure the webserver is running
@@ -61,15 +64,19 @@ Make sure the webserver is running
  
 Create the DockerFile, requirements.txt and python api code in the same directory. use the following commands to build the image and push it to docker hub
   
-$ docker login -u <username>
-$ docker build -t <username>/test-flask-app:v1 . 
-$ docker push <username>/test-flask-app:v1
+<a href="https://github.com/cloudthat-devops/genpact_capstone_batch1/tree/main/Docker">See the Docker files here</a>
+  
+  $ docker login -u <username> 
+  $ docker build -t <username>/test-flask-app:v1 . 
+  $ docker push <username>/test-flask-app:v1 
 
 In the jumper node create a pod that uses the above created image. Use the pod.yaml file.
   
+<a href="https://github.com/cloudthat-devops/genpact_capstone_batch1/tree/main/kubernetes">See the Kubernetes pod file here</a>
+  
 Use the following command to create the pod and a service for that pod
   
-$ kubectl apply -f <pod name.yaml>
+$ kubectl apply -f <pod file name.yaml>
 $ kubectl expose po <pod name> --type NodePort --port 5000
 $ kubectl get svc
 
