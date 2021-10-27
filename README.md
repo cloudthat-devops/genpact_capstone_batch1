@@ -17,7 +17,7 @@
 <a href="https://github.com/cloudthat-devops/genpact_capstone_batch1/blob/main/Python/api.py">See the Python solution code here</a>
 
 
-## Task :
+## Terraform & Ansible Task :
 ### Using Terraform launch an EC2 instance with security group corresponding to web-application. Using the terraform created instance and ansible install web-server (httpd) in that instance. Make sure the webs-server is up and running.
 
 Install terraform using following commands
@@ -91,7 +91,7 @@ ansible-playbook <playbook name.yaml>
 ```  
 Make sure the webserver is running
   
-## Task :
+## Docker & Kubernetes Task:
 ### Build a docker image to use the python api and push it to the DockerHub. Create a pod and nodeport service with that Docker image.
   
 ###  Hint: A KOPS cluster would be provided to you. You can use the worker nodes to write DockerFile and build image
