@@ -75,6 +75,8 @@ terraform apply
 ### Problem Statement: Once you have created new instance using terraform (as part of terraform task), ssh into that instance and install ansible in it.   After that, you have to install httpd webserver in the managed node.  You don’t have separate managed nodes. So use your ansible workstation itself as the managed node by adding the below line in your host inventory file:
 #### localhost ansible_connection = local 
 
+### Hint
+### Install ansible using the following commands
 ```
 $ sudo yum check-update
 $ sudo yum install python3.8 wget -y
