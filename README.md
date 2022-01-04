@@ -27,15 +27,16 @@
 <a href="https://github.com/cloudthat-devops/genpact_capstone_batch1/blob/main/AWS_HAPROXY/haproxy_lab_notes.md">See the alternate solution here</a>
 
 ## Terraform & Ansible Task :
-### Using Terraform launch an EC2 instance with security group corresponding to web-application. Using the terraform created instance and ansible install web-server (httpd) in that instance. Make sure the webs-server is up and running.
+### Problem Statement: Launch an Ubuntu EC2 instance (t2.micro) to be used as your terraform workstation.  From that WS, using terraform, launch an EC2 instance (instance type: t2.micro, OS: Red Hat Linux) to be used as an ansible workstation for the ansible task.  Ensure that you create a key (using ssh-keygen) and use it while launching the EC2, so that we can SSH into the ansible WS once it is created. 
+### Hints: 
+In your terraform WS, install terraform using following commands
 
-Install terraform using following commands
 
 ```
 $ sudo apt update
 $ sudo apt install wget unzip -y
-$ wget https://releases.hashicorp.com/terraform/1.0.9/terraform_1.0.9_linux_amd64.zip
-$ unzip terraform_1.0.9_linux_amd64.zip
+$ wget https://releases.hashicorp.com/terraform/1.0.11/terraform_1.0.11_linux_amd64.zip
+$ unzip terraform_1.0.11_linux_amd64.zip
 $ sudo mv terraform /usr/local/bin
 ```
 
@@ -70,10 +71,9 @@ terraform plan
 terraform apply 
 ```
 
-
-Once you have created instance using terraform ssh into that instance and install ansible in it
-
-Install the ansible using the following commands
+## Ansible Tasks:
+### Problem Statement: Once you have created new instance using terraform (as part of terraform task), ssh into that instance and install ansible in it.   After that, you have to install httpd webserver in the managed node.  You don’t have separate managed nodes. So use your ansible workstation itself as the managed node by adding the below line in your host inventory file:
+#### localhost ansible_connection = local 
 
 ```
 $ sudo yum check-update
