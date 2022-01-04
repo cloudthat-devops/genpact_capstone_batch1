@@ -26,7 +26,7 @@
 
 <a href="https://github.com/cloudthat-devops/genpact_capstone_batch1/blob/main/AWS_HAPROXY/haproxy_lab_notes.md">See the alternate solution here</a>
 
-## Terraform & Ansible Task :
+## Terraform Task :
 ### Problem Statement: Launch an Ubuntu EC2 instance (t2.micro) to be used as your terraform workstation.  From that WS, using terraform, launch an EC2 instance (instance type: t2.micro, OS: Red Hat Linux) to be used as an ansible workstation for the ansible task.  Ensure that you create a key (using ssh-keygen) and use it while launching the EC2, so that we can SSH into the ansible WS once it is created. 
 ### Hints: 
 In your terraform WS, install terraform using following commands
